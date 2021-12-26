@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', url: 'https://github.com/ATJP88/atjp123.git'
+            }
+    }
+        stage('Dev') {
+            steps {
+                echo 'This is Development Stage'
+        
+        }
+    }
+        stage('Test') {
+            steps {
+                echo 'This is Testing Stage'
+            }
+    }
+        stage('Deploy') {
+            steps {
+                echo 'This is Deploying Stage'
+            }
+    }
+        stage('Release') {
+            steps {
+                echo 'This is Releasing Stage'
+            }
+    }
+}
+}
